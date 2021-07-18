@@ -4,6 +4,11 @@ namespace CodeCoverageSample
     {
         public int Add(int one, int two)
         {
+            if (one == 1)
+            {
+                return one + two;
+            }
+            
             return one + two;
         }
 
