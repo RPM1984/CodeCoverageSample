@@ -14,7 +14,7 @@ namespace TestProject1
         {
             var actual = _calculator.Add(one, two);
 
-            Assert.Equal(3, actual);
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
