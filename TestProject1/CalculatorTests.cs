@@ -7,12 +7,11 @@ namespace TestProject1
     {
         private readonly Calculator _calculator = new Calculator();
 
-        [Fact]
-        public void GivenTwoNumbers_Add_ReturnsTheTwoNumbersAddedTogether()
+        [Theory]
+        [InlineData(1, 2, 3)]
+        [InlineData(0, 2, 2)]
+        public void GivenTwoNumbers_Add_ReturnsTheTwoNumbersAddedTogether(int one, int two, int expected)
         {
-            var one = 1;
-            var two = 2;
-
             var actual = _calculator.Add(one, two);
 
             Assert.Equal(3, actual);
